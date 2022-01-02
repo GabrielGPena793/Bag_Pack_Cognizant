@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Bag_Pack_Cognizant.iml" filepath="$PROJECT_DIR$/.idea/Bag_Pack_Cognizant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estrutura_De_Dados/Estrutura_De_Dados.iml" filepath="$PROJECT_DIR$/Estrutura_De_Dados/Estrutura_De_Dados.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estruturas_Repeticao/Estruturas_Repeticao.iml" filepath="$PROJECT_DIR$/Estruturas_Repeticao/Estruturas_Repeticao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Variaveis_Metodos/Variaveis_Metodos.iml" filepath="$PROJECT_DIR$/Variaveis_Metodos/Variaveis_Metodos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/operadores_Metodos/operadores_Metodos.iml" filepath="$PROJECT_DIR$/operadores_Metodos/operadores_Metodos.iml" />
+    </modules>
+  </component>
+</project>
