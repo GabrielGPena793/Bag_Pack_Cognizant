@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7f1b6c0-e8c1-42e6-99de-efa30b73a5eb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Estrutura_De_Dados/Estrutura_De_Dados.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Estruturas_Repeticao/Estruturas_Repeticao.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Variaveis_Metodos/Variaveis_Metodos.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/operadores_Metodos/operadores_Metodos.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +25,26 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Estrutura_De_Dados" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -38,5 +55,10 @@
       <updated>1640926900254</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Bag_Pack_Cognizant$Main.ic" NAME="Main Coverage Results" MODIFIED="1641242592458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.*</FILTER>
+    </SUITE>
   </component>
 </project>
