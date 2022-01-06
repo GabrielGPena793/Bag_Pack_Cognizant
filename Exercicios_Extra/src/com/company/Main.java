@@ -28,52 +28,30 @@ public class Main {
         System.out.println("Ordem natural(nome): \n" + linguagens);
 
         //ide
-        Set<LinguagemFavorita> linguagens2 = new TreeSet<>(new ComparteToIde());
+        Set<LinguagemFavorita> linguagens2 = new TreeSet<>(Comparator.comparing(ide -> ide.getIde()));
         linguagens2.addAll(linguagens);
         System.out.println("Ordem por Ide \n" + linguagens2);
 
         //ano criação e nome
-        linguagens2 = new TreeSet<>(new ComparteToAnoNome());
+        linguagens2 = new TreeSet<>(Comparator.comparing(anoNome -> anoNome.getAnoDeCriacao()));
         linguagens2.addAll(linguagens);
         System.out.println("Ordem por ano e nome \n" + linguagens2);
 
         //Nome, ano de criação e IDE;
-        linguagens2 = new TreeSet<>(new ComparteToNomeAnoIde());
+        linguagens2 = new TreeSet<>(new Comparator<LinguagemFavorita>() {
+            @Override
+            public int compare(LinguagemFavorita o1, LinguagemFavorita o2) {
+                int comparacaoNome = o1.getNome().compareToIgnoreCase(o2.getNome());
+                if (comparacaoNome != 0) return comparacaoNome;
+
+                int comparacaoAno = o1.getAnoDeCriacao().compareTo(o2.getAnoDeCriacao());
+                if (comparacaoAno != 0) return comparacaoAno;
+
+                return o1.getIde().compareToIgnoreCase(o2.getIde());
+            }
+        });
         linguagens2.addAll(linguagens);
         System.out.println("Ordem por nome/ano/Ide \n" + linguagens2);
 
     }
 }
-
-    class ComparteToIde implements Comparator<LinguagemFavorita> {
-
-        @Override
-        public int compare(LinguagemFavorita o, LinguagemFavorita b) {
-            return o.getIde().compareToIgnoreCase(b.getIde());
-        }
-    }
-
-    class ComparteToAnoNome implements Comparator<LinguagemFavorita>{
-
-        @Override
-        public int compare(LinguagemFavorita o1, LinguagemFavorita o2) {
-            int comparacao = o1.getAnoDeCriacao().compareTo(o2.getAnoDeCriacao());
-            if (comparacao != 0) return comparacao;
-
-            return o1.getNome().compareToIgnoreCase(o2.getNome());
-        }
-    }
-
-    class ComparteToNomeAnoIde implements Comparator<LinguagemFavorita>{
-
-        @Override
-        public int compare(LinguagemFavorita o1, LinguagemFavorita o2) {
-            int comparacaoNome = o1.getNome().compareToIgnoreCase(o2.getNome());
-            if (comparacaoNome != 0) return comparacaoNome;
-
-            int comparacaoAno = o1.getAnoDeCriacao().compareTo(o2.getAnoDeCriacao());
-            if (comparacaoAno != 0) return comparacaoAno;
-
-            return o1.getIde().compareToIgnoreCase(o2.getIde());
-        }
-    }
