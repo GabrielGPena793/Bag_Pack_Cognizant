@@ -1,13 +1,18 @@
 package com.Dio;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Banco {
-    private String nome;
 
-    public String getNome() {
-        return nome;
+    List<Conta> contas = new ArrayList<>();
+
+    public void addConta(Conta conta){
+        this.contas.add(conta);
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void exibirContas(){
+        contas.forEach(Conta::imprimirInfoConta);
     }
+
 }

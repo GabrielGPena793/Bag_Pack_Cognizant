@@ -6,10 +6,12 @@ public abstract class Conta {
 
     protected   int agencia , numero;
     protected double saldo;
+    protected Cliente cliente;
 
-    public Conta() {
+    public Conta(Cliente cliente) {
         this.numero = sequencial++;
         this.agencia = this.AGENCIA_PADRAO;
+        this.cliente = cliente;
     }
 
     public int getAgencia() {
@@ -27,7 +29,6 @@ public abstract class Conta {
     public void sacar(double valor){
         if (valor <= this.saldo){
             this.saldo -= valor;
-            System.out.println("Saque realizado com sucesso!");
         }
         else System.out.println("Saldo insuficiente!");
     }
@@ -39,5 +40,12 @@ public abstract class Conta {
     public void transferir(double valor, Conta contaDestino){
         this.sacar(valor);
         contaDestino.depositar(valor);
+    }
+
+    public void imprimirInfoConta(){
+        System.out.println("Titular: " + this.cliente.getNome());
+        System.out.println("Numero: " + this.getNumero());
+        System.out.println("Agência: " + this.getAgencia());
+        System.out.println("saldo: " + this.getSaldo());
     }
 }
