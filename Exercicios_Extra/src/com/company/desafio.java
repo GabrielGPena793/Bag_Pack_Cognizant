@@ -1,18 +1,23 @@
 package com.company;
 
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
 public class desafio {
 
     public static void main(String[] args) {
 
-        for (int i = 1; i <= 39; i++) System.out.print("-");
-        for (int count = 1; count<=5; count++) {
-            System.out.print("\n|");
-            for (int i = 1; i <= 37; i++) System.out.print(" ");
-            System.out.print("|");
+        Scanner leitor = new Scanner(System.in);
+
+
+        while(leitor.hasNext()){
+            int senha = leitor.nextInt();
+
+            if(senha != 2002) System.out.println("Senha Invalida");
+            else {
+                System.out.println("Acesso Permitido");
+                break;
+            }
         }
-        System.out.println();
-        for (int i = 1; i <= 39; i++) System.out.print("-");
-
-
     }
 }
